@@ -88,3 +88,17 @@ footer a { float: left; margin: 5px; }
 
 .pet-collage img:nth-child(3n) { height: 220px; }
 .pet-collage img:nth-child(4n) { height: 200px; }
+
+.debug-demo {
+  clear: both;        /* pushes it below the floated .pet-image-container and .dashboard */
+  margin-top: 32px;
+}
+
+.debug-row {
+  margin-bottom: 8px;
+}
+
+#treat-btn {
+  margin-top: 4px;
+}
+

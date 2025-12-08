@@ -40,6 +40,30 @@
         <!-- Pet Collage -->
         <div id="pet-collage" class="pet-collage" aria-label="Pet photo collage"></div>
       </section>
+
+      <!-- Treat Calculator Debugging Demo -->
+      <section class="debug-demo">
+        <h2>Treat Calculator</h2>
+        <p>Help Miso keep track of treats!</p>
+
+        <div class="debug-row">
+          <label>
+            Treats Miso already had today:
+            <input id="treats-already" type="text" placeholder="5">
+          </label>
+        </div>
+
+        <div class="debug-row">
+          <label>
+            Treats you want to give now:
+            <input id="treats-new" type="text" placeholder="1">
+          </label>
+        </div>
+
+        <button id="treat-btn">Add Treats</button>
+
+        <p id="treat-result" aria-live="polite"></p>
+      </section>
     </main>
 
     <!-- jQuery (for .scrollTop() & .scrollLeft()) -->

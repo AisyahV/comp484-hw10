@@ -233,3 +233,52 @@ function nudgeCollage(delta) {
   // Set horizontal scroll position
   $collage.scrollLeft(target); //  jQuery .scrollLeft()
 }
+
+// ============================
+// DevTools Debug Demo - Treat Calculator (BUGGY ON PURPOSE)
+// ============================
+
+const treatsAlreadyInput = document.querySelector('#treats-already');
+const treatsNewInput = document.querySelector('#treats-new');
+const treatBtn = document.querySelector('#treat-btn');
+const treatResult = document.querySelector('#treat-result');
+
+function treatInputsAreEmpty() {
+  return treatsAlreadyInput.value === '' || treatsNewInput.value === '';
+}
+
+function getTreatsAlready() {
+  return treatsAlreadyInput.value;
+}
+
+function getTreatsNew() {
+  return treatsNewInput.value;
+}
+
+function updateTreatLabel() {
+  var treatsAlready = getTreatsAlready();
+  var treatsNew = getTreatsNew();
+
+  // String concatenation instead of numeric addition
+   var totalTreats = parseInt(treatsAlready) + parseInt(treatsNew);
+
+  treatResult.textContent =
+    treatsAlready +
+    ' treats + ' +
+    treatsNew +
+    ' treats = ' +
+    totalTreats +
+    ' treats';
+}
+
+function onTreatClick() {
+  if (treatInputsAreEmpty()) {
+    treatResult.textContent = 'Please enter both treat amounts.';
+    return;
+  }
+  updateTreatLabel();
+}
+
+if (treatBtn) {
+  treatBtn.addEventListener('click', onTreatClick);
+}
